@@ -11,6 +11,7 @@ from collections import defaultdict
 window = tix.Tk()
 windll.shcore.SetProcessDpiAwareness(1) # fix blurry
 window.title('Pathseeker by Altah')
+window.iconbitmap("icons/icon.ico")
 window.resizable(width=False, height=False) # lock size
 window.state("zoomed")
 
