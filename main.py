@@ -373,14 +373,6 @@ timerProcessing_Solution = ttk.Label(
 )
 timerProcessing_Solution.place(x=1100,y=30)
 
-statGraph_ProcessingTimer = tk.Canvas(
-    master=window,
-    height= 100,
-    width= 100,
-    bg='black'
-)
-#statGraph_ProcessingTimer.place(x=1500, y=0)
-
 # pattern function -------------------------------------
 Maze_PastePatternButton = ttk.Button(
     master=window,
@@ -641,7 +633,7 @@ def drawLine_Path(optimizeMode=0):
                 countPath+=1
                 distance = math.sqrt((local_endX - x0) ** 2 + (local_endY - y0) ** 2)
                 allPath.append([i, -1, distance])
-    numberPath.configure(text='Number of paths: ' + str(countPath+1))
+    numberPath.configure(text='Number of paths: ' + str(countPath))
 
     if optimizeMode==0:
         lastArchiveTimer_Path= time.perf_counter() - Timer_Solution
